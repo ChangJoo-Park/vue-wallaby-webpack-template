@@ -1,6 +1,8 @@
 # vue-webpack-wallaby
 
-> vue webpack template with wallaby
+> Vue.js + Vue-cli Webpack template + Wallaby.js
+
+Demo : https://vimeo.com/214858833
 
 ## Build Setup
 
