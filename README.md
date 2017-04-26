@@ -4,6 +4,8 @@
 
 Demo : https://vimeo.com/214858833
 
+![gif](http://i.imgur.com/OhqdbwC.gif)
+
 ## Build Setup
 
 ``` bash
