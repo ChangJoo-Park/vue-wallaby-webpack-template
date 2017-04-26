@@ -1,12 +1,7 @@
-// const webpack = require('webpack')
 const webpackConfig = require('./build/webpack.test.conf.js')
 const wallabyWebpack = require('wallaby-webpack')
 
 module.exports = function (wallaby) {
-  // webpackConfig.ts.compilerOptions = {
-  //   baseUrl: wallaby.localProjectDir,
-  //   paths: {'*': ['./node_modules/*']}
-  // }
   const wallabyPostprocessor = wallabyWebpack(webpackConfig)
 
   return {
