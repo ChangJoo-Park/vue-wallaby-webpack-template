@@ -2,10 +2,12 @@ const webpackConfig = require('./build/webpack.test.conf.js')
 const wallabyWebpack = require('wallaby-webpack')
 
 module.exports = function (wallaby) {
+  webpackConfig.resolve.alias['@'] = require('path').join(wallaby.projectCacheDir, 'src');
   const wallabyPostprocessor = wallabyWebpack(webpackConfig)
 
   return {
     files: [
+      {pattern: '.babelrc', load: false},
       {pattern: 'node_modules/babel-polyfill/dist/polyfill.js', instrument: false},
       {pattern: 'src/**/*.*', load: false}
     ],
