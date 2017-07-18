@@ -30,8 +30,25 @@ describe('Hello.vue', () => {
   it('should props count is Number', () => {
     const Constructor = Vue.extend(Hello)
     const vm = new Constructor({
-      propsData: { count: 2 }
+      propsData: { count: 2 },
     }).$mount()
     expect(vm.$props.count).toBe(2)
+  })
+
+  it('should itemCount is 0', () => {
+    const Constructor = Vue.extend(Hello)
+    const vm = new Constructor().$mount()
+    expect(vm.itemCount).toBe(0)
+  })
+
+  it('should itemCount is increased by increaseCount()', () => {
+    const Constructor = Vue.extend(Hello)
+    const vm = new Constructor().$mount()
+    expect(vm.itemCount).toBe(0)
+    vm.increaseCount()
+    expect(vm.itemCount).toBe(1)
+    vm.increaseCount() // 2
+    vm.increaseCount() // 3
+    expect(vm.itemCount).toBe(3)
   })
 })

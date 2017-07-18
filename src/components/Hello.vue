@@ -31,7 +31,13 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      itemCount: 0
+    }
+  },
+  methods: {
+    increaseCount () {
+      this.itemCount++
     }
   }
 }
