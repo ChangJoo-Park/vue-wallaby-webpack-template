@@ -35,12 +35,14 @@ describe('Hello.vue', () => {
     expect(vm.$props.count).toBe(2)
   })
 
+  // Scenario 5: data "itemCount"
   it('should itemCount is 0', () => {
     const Constructor = Vue.extend(Hello)
     const vm = new Constructor().$mount()
     expect(vm.itemCount).toBe(0)
   })
 
+  // Scenario 6: increase data "itemCount" with "increaseCount()"
   it('should itemCount is increased by increaseCount()', () => {
     const Constructor = Vue.extend(Hello)
     const vm = new Constructor().$mount()
@@ -52,6 +54,7 @@ describe('Hello.vue', () => {
     expect(vm.itemCount).toBe(3)
   })
 
+  // Scenario 7: computed property "reversedMessage"
   it('should reverseMessage is based on msg', () => {
     const Constructor = Vue.extend(Hello)
     const vm = new Constructor().$mount()
