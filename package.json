@@ -70,6 +70,7 @@
     "vue-loader": "^12.2.2",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.2.6",
+    "wallaby-vue-compiler": "^1.0.2",
     "wallaby-webpack": "0.0.38",
     "webpack": "^3.3.0",
     "webpack-bundle-analyzer": "^2.2.1",
