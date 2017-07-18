@@ -29,6 +29,11 @@ export default {
       default: 1
     }
   },
+  computed: {
+    reverseMessage () {
+      return this.msg.split('').reverse().join('')
+    }
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

@@ -51,4 +51,14 @@ describe('Hello.vue', () => {
     vm.increaseCount() // 3
     expect(vm.itemCount).toBe(3)
   })
+
+  it('should reverseMessage is based on msg', () => {
+    const Constructor = Vue.extend(Hello)
+    const vm = new Constructor().$mount()
+    vm.msg = 'Hello'
+    expect(vm.msg).toBe('Hello')
+    expect(vm.reverseMessage).toBe('olleH')
+    vm.msg = 'Tomato'
+    expect(vm.reverseMessage).toBe('otamoT')
+  })
 })
