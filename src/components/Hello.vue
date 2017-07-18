@@ -30,7 +30,7 @@ export default {
     }
   },
   computed: {
-    reverseMessage () {
+    reversedMessage () {
       return this.msg.split('').reverse().join('')
     }
   },
