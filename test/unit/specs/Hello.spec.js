@@ -60,8 +60,8 @@ describe('Hello.vue', () => {
     const vm = new Constructor().$mount()
     vm.msg = 'Hello'
     expect(vm.msg).toBe('Hello')
-    expect(vm.reverseMessage).toBe('olleH')
+    expect(vm.reversedMessage).toBe('olleH')
     vm.msg = 'Tomato'
-    expect(vm.reverseMessage).toBe('otamoT')
+    expect(vm.reversedMessage).toBe('otamoT')
   })
 })
