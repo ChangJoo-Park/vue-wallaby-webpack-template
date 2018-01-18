@@ -5,6 +5,7 @@ module.exports = function (wallaby) {
   webpackConfig.resolve.alias = {'@': require('path').join(wallaby.projectCacheDir, 'src')}
   webpackConfig.externals = {vue: 'Vue'}
   webpackConfig.module.rules.find(r => r.loader === 'vue-loader').options.loaders.js = ''
+  webpackConfig.plugins.push(new (require('webpack').LoaderOptionsPlugin)({test: /\.vue$/, sourceMap: false}))
 
   const wallabyPostprocessor = wallabyWebpack(webpackConfig)
 
